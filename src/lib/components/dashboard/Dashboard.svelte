@@ -1,5 +1,5 @@
 <script>
-    import Logo from "../dashboard/img/favicon.png";
+    // import Logo from "../dashboard/img/favicon.png"; //Icon from DashBoard
     //MODE DARK
     // @ts-ignore
     export let isDarkMode;
@@ -22,12 +22,12 @@
 }>
     <header>
         <span class="image-container">
-            <img src={Logo} alt="logo" />
+            <img src="https://scontent.flim8-1.fna.fbcdn.net/v/t39.30808-6/302809576_491499069649728_130668187193949601_n.png?_nc_cat=108&ccb=1-7&_nc_sid=a2f6c7&_nc_eui2=AeG0fKzp-No3B9xArHd96dTlGIwNqXBtgFoYjA2pcG2AWislTuiRfdsCTSC28BdjuKof2Hl5KG1ZDt3UaM5M0CkE&_nc_ohc=navxR_59vNUAX9xLf-Y&_nc_ht=scontent.flim8-1.fna&oh=00_AfDCUhPg75IsR25IW_EV0y2k12iNVFn62MLm7t7hONLBBA&oe=65220ABB" alt="logo" />
         </span>
 
         <div class="header_text-container">
-            <p>DevLessyo</p>
-            <p class="low_space-text">Full Stack</p>
+            <p>PersonalVIP</p>
+            <p class="low_space-text">Gymnasio</p>
         </div>
 
         <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -190,7 +190,7 @@
 
     img {
         width: 40px;
-        border-radius: 6px;
+        border-radius: 20px;
     }
 
     .header_text-container {
