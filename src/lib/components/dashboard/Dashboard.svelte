@@ -1,10 +1,7 @@
 <script>
     // IMPORTS
     import Header from "./elements/Header.svelte";
-    import Search from "./elements/menu/Search.svelte";
-    import ListSections from "./elements/menu/List-sections.svelte";
-    import Logout from "./elements/menu/Logout.svelte";
-    import Mode from "./elements/menu/Mode.svelte";
+    import { Search, ListSections, Logout, Mode } from "./elements/menu/index";
 
     //MODE DARK
     // @ts-ignore
