@@ -3,17 +3,6 @@
     import Header from "./elements/Header.svelte";
     import { Search, ListSections, Logout, Mode } from "./elements/menu/index";
 
-    //MODE DARK
-    // @ts-ignore
-    /**
-     * @type {any}
-     */
-    export let isDarkMode;
-    // @ts-ignore
-    /**
-     * @type {any}
-     */
-     export let handleDarkMode;
     //NavBar Oculto
     // @ts-ignore
     /**
@@ -25,14 +14,11 @@
      * @type {any}
      */
     export let handleHidden;
-
-    isDarkMode ? "dark" : "";
 </script>
 
 <!--HTML-->
 <section
     class={`
-        ${!isDarkMode ? "" : "dark"} 
         ${!isHidden ? "" : "hidden"}
     `}
 >
@@ -45,10 +31,7 @@
         </div>
         <div>
             <Logout />
-            <Mode
-                handleDarkMode = { handleDarkMode }
-                isDarkMode = { isDarkMode }
-            />
+            <Mode />
         </div>
     </nav>
 </section>
@@ -79,5 +62,9 @@
     /* SIDEVAR CLOSED */
     section.hidden {
         width: 88px;
+    }
+
+    button {
+        margin-left: 300px;
     }
 </style>

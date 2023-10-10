@@ -1,11 +1,7 @@
 <script>
     import Dashboard from "../lib/components/dashboard/Dashboard.svelte";
-    //DARKMODE
-    let isDarkMode = true;
+    import { theme } from "../store/store.js";
 
-    const handleDarkMode = () => {
-        isDarkMode = isDarkMode ? false : true;
-    };
     //DISGUISE NavBar
     let isHidden = false;
 
@@ -15,12 +11,9 @@
 
 </script>
 
-<div class={ isDarkMode ? 'dark' : '' }>
+<div class:dark={$theme === 'Dark'}>
     <header>
         <Dashboard
-            isDarkMode={ isDarkMode }
-            handleDarkMode={ handleDarkMode }
-
             isHidden={ isHidden }
             handleHidden={ handleHidden }
         />
@@ -28,10 +21,6 @@
 </div>
 
 <style>
-    :global(body) {
-        background-color: var(--black);
-    }
-
     .dark {
         /* ====Colors==== */
         --body-color: #18191a;

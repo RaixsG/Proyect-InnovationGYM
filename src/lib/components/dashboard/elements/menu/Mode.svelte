@@ -1,14 +1,11 @@
 <script>
-    // @ts-ignore
-    /**
-     * @type {any}
-     */
-     export let handleDarkMode;
-    // @ts-ignore
-    /**
-     * @type {any}
-     */
-     export let isDarkMode;
+    import { theme } from '../../../../../store/store';
+
+    function toggleTheme() {
+        // Cambia el valor del store a 'dark' si es 'light', y viceversa
+        theme.update(value => value === 'Light' ? 'Dark' : 'Light');
+    }
+
 </script>
 
 <li class="theme_selector-container">
@@ -16,15 +13,19 @@
         <i class="bx bx-moon theme_icon moon" />
         <i class="bx bx-sun theme_icon sun" />
     </div>
-    <p>{isDarkMode ? "Dark" : "Light"} Mode</p>
-    <div class="theme_switch-container">
+    {#if $theme === "Dark"}
+        <p>Dark Mode</p>
+    {:else}
+        <p>Light Mode</p>
+    {/if}
+    <button class="theme_switch-container">
         <!-- svelte-ignore a11y-no-static-element-interactions -->
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
         <span
             class="theme_switch"
-            on:click={ handleDarkMode }
-            on:keypress={ handleDarkMode }
+            on:click={ toggleTheme }
         />
-    </div>
+    </button>
 </li>
 
 <style>
