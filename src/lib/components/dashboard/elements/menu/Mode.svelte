@@ -1,5 +1,5 @@
 <script>
-    import { theme } from '../../../../../store/store';
+    import { theme } from '../../../../../store/theme';
 
     function toggleTheme() {
         // Cambia el valor del store a 'dark' si es 'light', y viceversa
@@ -10,8 +10,11 @@
 
 <li class="theme_selector-container">
     <div class="theme_icon-container">
-        <i class="bx bx-moon theme_icon moon" />
-        <i class="bx bx-sun theme_icon sun" />
+        {#if $theme === "Dark"}
+            <i class="bx bx-moon theme_icon moon" />
+        {:else}
+            <i class="bx bx-sun theme_icon sun" />
+        {/if}
     </div>
     {#if $theme === "Dark"}
         <p>Dark Mode</p>
@@ -19,10 +22,11 @@
         <p>Light Mode</p>
     {/if}
     <button class="theme_switch-container">
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
         <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <!-- svelte-ignore a11y-no-static-element-interactions -->
         <span
             class="theme_switch"
+            class:theme_switch-on = { $theme === "Dark"}
             on:click={ toggleTheme }
         />
     </button>
@@ -83,7 +87,7 @@
     }
 
     .sun {
-        opacity: 0;
+        opacity: 1;
     }
 
     .theme_switch-container {
@@ -106,20 +110,20 @@
         top: 50%;
         left: 5px;
         transform: translateY(-50%);
-        background-color: var(--sidebar-color);
+        background-color: var(--primary-color);
         transition: var(--tran-03);
     }
 
     /* SIDEBAR DARK MODE */
-    section.dark li .moon {
-        opacity: 0;
-    }
-
-    section.dark li .sun {
+    section.Dark li .theme_icon-container i .moon {
         opacity: 1;
     }
 
-    section.dark li .theme_switch-container .theme_switch {
+    section.Dark li .theme_icon-container i .sun {
+        opacity: 0;
+    }
+
+    .theme_switch-on {
         left: 25px;
     }
 
@@ -129,7 +133,7 @@
     }
     
     section.hidden li p {
-        opacity: 0;
+        opacity: 1;
     }
 
 </style>

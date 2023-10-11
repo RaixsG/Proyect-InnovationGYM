@@ -1,6 +1,6 @@
 <script>
     import Dashboard from "../lib/components/dashboard/Dashboard.svelte";
-    import { theme } from "../store/store.js";
+    import { theme } from "../store/theme.js";
 
     //DISGUISE NavBar
     let isHidden = false;

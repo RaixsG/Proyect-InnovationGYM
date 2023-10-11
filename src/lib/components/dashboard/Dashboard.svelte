@@ -63,8 +63,5 @@
     section.hidden {
         width: 88px;
     }
-
-    button {
-        margin-left: 300px;
-    }
+    
 </style>
