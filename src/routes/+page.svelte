@@ -11,7 +11,7 @@
 
 </script>
 
-<div class:dark={$theme === 'Dark'}>
+<div >
     <header>
         <Dashboard
             isHidden={ isHidden }
@@ -21,13 +21,5 @@
 </div>
 
 <style>
-    .dark {
-        /* ====Colors==== */
-        --body-color: #18191a;
-        --sidebar-color: #242526;
-        --primary-color: #3a3b3c;
-        --primary-color-light: #3a3b3c;
-        --toggle-color: #fff;
-        --text-color: #ccc;
-    }
+    
 </style>

@@ -1,19 +1,19 @@
 <li>
     <a href="#">
         <i class="bx bx-log-out" />
-        <p
+        <button
             on:click={() => {
                 console.log("Log out");
             }}
             on:keypress={(event) => console.log(event)}
         >
             Logout
-        </p>
+        </button>
     </a>
 </li>
 
 <style>
-    p {
+    button {
         font-size: 17px;
         font-weight: 500;
         white-space: nowrap;
@@ -30,7 +30,7 @@
     }
 
     i,
-    p {
+    button {
         color: var(--text-color);
         transition: var(--tran-02);
     }
@@ -56,12 +56,12 @@
         background-color: var(--primary-color);
     }
 
-    a:hover p,
+    a:hover button,
     a:hover i {
         color: var(--white);
     }
     /* SIDEVAR CLOSED */
-    section.hidden li a p {
+    section.hidden li a button {
         display: none;
     }
 
