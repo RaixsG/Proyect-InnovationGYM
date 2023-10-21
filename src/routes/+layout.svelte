@@ -1,13 +1,24 @@
 <script>
-    import { theme } from '../store/theme';
-    import '../styles.css';
+    import { theme } from "../store/theme";
+    import "../styles.css";
+    import Dashboard from "$lib/components/dashboard/Dashboard.svelte";
+
+    let isHidden = false;
+    const handleHidden = () => isHidden = !isHidden;
 </script>
 
-<div class:dark={$theme === 'Dark'}>
-    <slot  />
+<div
+    class="app"
+    class:dark={$theme === "Dark"}
+>
+    <slot />
+    <Dashboard {isHidden} {handleHidden} />
 </div>
 
 <style>
+    .app {
+        padding-left: 88px;
+    }
     .dark {
         /* ====Colors==== */
         --body-color: #18191a;

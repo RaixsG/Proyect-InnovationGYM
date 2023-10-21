@@ -1,29 +1,23 @@
 <script>
-    // IMPORTS
-    import Header from "./elements/Header.svelte";
-    import { Search, ListSections, Logout, Mode } from "./elements/menu/index";
-
-    //NavBar Oculto
-    // @ts-ignore
-    /**
-     * @type {any}
-     */
+    //Imports
+    import {
+        Header,
+        Search,
+        ListSections,
+        Logout,
+        Mode,
+    } from "./elements";
     export let isHidden;
-    // @ts-ignore
-    /**
-     * @type {any}
-     */
     export let handleHidden;
 </script>
 
 <!--HTML-->
-<section
-    class={`
-        ${!isHidden ? "" : "hidden"}
-    `}
->
+<button
+    class={`background ${!isHidden ? "background-active" : ""}`}
+    on:click={handleHidden}
+/>
+<section class={`${!isHidden ? "" : "hidden"}`}>
     <Header {handleHidden} />
-
     <nav class="menu-container">
         <div>
             <Search />
@@ -43,11 +37,29 @@
         position: fixed;
         top: 0;
         left: 0;
+        z-index: 30;
         height: 100%;
         width: 250px;
         padding: 10px 14px;
         background: var(--sidebar-color);
         transition: var(--tran-05);
+    }
+
+    .background {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        z-index: 20;
+        background-color: transparent;
+        pointer-events: none;
+        transition: background-color .2s;
+    }
+
+    .background-active {
+        background-color: #00000050;
+        pointer-events: all;
     }
 
     /* SIDEBAR MENU */

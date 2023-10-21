@@ -1,38 +1,50 @@
 <ul>
     <li>
-        <a href="#">
+        <a href="/">
             <i class="bx bx-home-smile" />
-            <p class="text nav-text">Dashboard</p>
+            <p class="text nav-text">Inicio</p>
         </a>
     </li>
     <li>
-        <a href="#">
-            <i class="bx bx-bar-chart-alt-2" />
-            <p class="text nav-text">Revenue</p>
-        </a>
-    </li>
-    <li>
-        <a href="#">
-            <i class="bx bx-bell" />
-            <p class="text nav-text">Notifications</p>
-        </a>
-    </li>
-    <li>
-        <a href="#">
-            <i class="bx bx-pie-chart-alt" />
-            <p class="text nav-text">Analytics</p>
+        <a href="/clients">
+            <i class="bx bx-heart" />
+            <p class="text nav-text">Clientes</p>
         </a>
     </li>
     <li>
         <a href="#">
             <i class="bx bx-heart" />
-            <p class="text nav-text">Likes</p>
+            <p class="text nav-text">Instructores</p>
         </a>
     </li>
     <li>
         <a href="#">
             <i class="bx bx-wallet" />
-            <p class="text nav-text">Wallets</p>
+            <p class="text nav-text">Pagar</p>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <i class="bx bx-pie-chart-alt" />
+            <p class="text nav-text">Tipos de Membresias</p>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <i class="bx bx-pie-chart-alt" />
+            <p class="text nav-text">Productos</p>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <i class="bx bx-bell" />
+            <p class="text nav-text">Horarios</p>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <i class="bx bx-bar-chart-alt-2" />
+            <p class="text nav-text">Horarios de Clientes</p>
         </a>
     </li>
 </ul>
