@@ -12,7 +12,7 @@
         </a>
     </li>
     <li>
-        <a href="#">
+        <a href="/instructor">
             <i class="bx bx-heart" />
             <p class="text nav-text">Instructores</p>
         </a>

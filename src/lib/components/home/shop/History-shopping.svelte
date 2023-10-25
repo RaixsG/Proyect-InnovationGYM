@@ -1,6 +1,6 @@
 <script>
     import Graphics from "$lib/components/global/Graphics.svelte";
-    import Tabla from "$lib/components/global/Tabla.svelte";
+    import Tabla from "$lib/components/global/table/Tabla.svelte";
     
     let headers = ['Nombre', 'Correo electrónico', 'Teléfono'];
     let data = [

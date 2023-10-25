@@ -1,5 +1,5 @@
 <script>
-    import Tabla from "$lib/components/global/Tabla.svelte";
+    import Tabla from "$lib/components/global/table/Tabla.svelte";
 
     let headers = ['Nombre', 'Horas', 'Turno'];
     let data = [
