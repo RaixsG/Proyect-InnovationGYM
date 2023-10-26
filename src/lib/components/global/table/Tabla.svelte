@@ -21,10 +21,7 @@
 
 </script>
 
-<div>
-    <button on:click={prevPage} disabled={currentPage === 1}>Anterior</button>
-    <button on:click={nextPage} disabled={currentPage * pageSize >= data.length}>Siguiente</button>
-</div>
+
 <table>
     <thead>
         <tr>
@@ -50,6 +47,10 @@
         </tr>
     </tfoot>
 </table>
+<div>
+    <button on:click={prevPage} disabled={currentPage === 1}>Anterior</button>
+    <button on:click={nextPage} disabled={currentPage * pageSize >= data.length}>Siguiente</button>
+</div>
 
 <style>
     div {

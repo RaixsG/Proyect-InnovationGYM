@@ -6,7 +6,7 @@
 </script>
 
 <div>
-    <h1>HOME</h1>
+    <h1>Personal-VIP</h1>
     <article>
         <HistoryShopping />
         <TimeInstructor />        
@@ -19,7 +19,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         background-color: var(--sidebar-color);
         color: var(--text-color);
     }
